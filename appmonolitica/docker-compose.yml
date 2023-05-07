@@ -1,0 +1,14 @@
+version: "3.7"
+services: 
+  appmonolitica:
+  container_name: appmonolitica
+  image: jmachado12/appmonolitica:1.0.1
+  build:
+      dockerfile: appmonolitica/Dockerfile
+      context: .
+  ports:
+   - "6001:6001"
+  networks:
+   - ase-acad
+networks:
+  ase-acad:

@@ -1,0 +1,15 @@
+version: "3.7"
+services: 
+  microappuniversidades:
+  container_name: microappuniversidades
+  image: jmachado12/microappuniversidades:1.0.1
+  build:
+      dockerfile: microappuniversidades/Dockerfile
+      context: .
+  ports:
+   - "6000:6000"
+  networks:
+   - ase-acad
+  depends_on:
+   - appmonolitica
+  appmonolitica:
